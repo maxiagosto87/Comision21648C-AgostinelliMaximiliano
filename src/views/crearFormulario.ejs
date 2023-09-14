@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Inclusión de elementos comunes en la cabeza de la página -->
+  <%- include("partials/head")%>
+  <!-- Título de la página -->
+  <title><%= title %></title>
+</head>
+<body class="fondocrear">
+  <header>
+    <!-- Barra de navegación -->
+    <%- include("partials/navBar") %>
+  </header>
+  <main>
+    <div class="container-form mt-3 mb-3">
+      <!-- Encabezado del formulario -->
+      <h1 class="text-center" id="h1gral">Crear Publicación</h1>
+      <!-- Formulario -->
+      <form action="/publicaciones/" method="post">
+        <div class="form-group text-primary">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" required>
+        </div>
+        <div class="form-group text-primary">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="form-group text-primary">
+          <label for="contenido">Contenido:</label>
+          <textarea class="form-control" id="contenido" name="contenido" rows="4" maxlength="1000" required></textarea>
+        </div>
+        <div class="form-group text-primary">
+          <label for="link">URL:</label>
+          <input type="text" class="form-control" name="link" id="link">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Crear Publicación</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <!-- Pie de página u otros elementos comunes -->
+    <%- include("partials/footer") %>
+  </footer>
+</body>
+</html>

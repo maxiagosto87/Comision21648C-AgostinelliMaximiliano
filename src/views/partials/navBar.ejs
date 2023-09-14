@@ -1,0 +1,36 @@
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark nav">
+  <div class="container-fluid">
+    <!-- Logo en la barra de navegación -->
+    <a class="navbar-brand fs-6">
+      <img id="inicio" class="logotipo" src="/img/Logo.PNG" alt="Logo">
+    </a>
+    <!-- Botón para mostrar/ocultar menú en dispositivos pequeños -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Contenedor del menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Lista de elementos de menú -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <button class="btn btn-link" id="linknav" onclick="window.location.href='/'">Inicio</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link" id="linknav" onclick="window.location.href='/publicaciones/views'">Publicaciones</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link" id="linknav" onclick="window.location.href='/publicaciones'">Crear Publicación</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

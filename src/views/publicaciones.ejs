@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la página obtenido de la variable "titleUser" -->
+    <title><%= titleUser %></title>
+    <!-- Inclusión de elementos comunes en la cabeza de la página -->
+    <%- include("partials/head") %>
+</head>
+<body class="fondoPublicacion">
+    <header>
+        <!-- Barra de navegación -->
+        <%- include("partials/navBar") %>
+    </header>
+    <main>
+        <div class="container mt-3 mb-3">
+            <h1 class="text-center" id="h1gral"><%= titleUser %></h1>
+
+            <ul class="list-group">
+                <% results.forEach((publicacion) => { %>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <!-- Detalles de la publicación -->
+                            <div id="divpubli" class="col-md-6">
+                                <strong>Nombre:</strong> <%= publicacion.nombre %><br>
+                                <strong>Email:</strong> <%= publicacion.email %><br>
+                                <strong>Contenido:</strong> <%= publicacion.contenido %><br>
+                                <strong>Fecha:</strong> <%=  publicacion.createdAt %><br>
+                            </div>
+                            <!-- Imagen de la publicación -->
+                            <div class="col-md-6 mt-2">
+                                <div class="image-container">
+                                    <img src="<%= publicacion.link %>" alt="Imagen de la publicación" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Botones de borrado y edición -->
+                        <div class="mt-3">
+                            <div>
+                                <form action="/borrar/<%= publicacion.id %>" method="DELETE">
+                                    <!-- Utiliza un campo oculto para enviar el método DELETE -->
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger">BORRAR</button>
+                                </form>
+                            </div>
+                            <div class="mt-1">
+                                <a href="/editar/<%= publicacion.id %>" class="btn btn-dark">EDITAR</a>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <!-- Pie de página u otros elementos comunes -->
+        <%- include("partials/footer") %>
+    </footer>
+</body>
+</html>

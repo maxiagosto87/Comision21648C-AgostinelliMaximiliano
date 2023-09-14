@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Inclusión de elementos comunes en la cabeza de la página -->
+    <%- include("partials/head")%>
+    <!-- Título de la página -->
+    <title><%= title %></title>
+</head>
+<body class="fondocrear">
+    <header>
+        <!-- Barra de navegación -->
+        <%- include("partials/navBar") %>
+    </header>
+    <main>
+        <div class="container-form mt-3 mb-3">
+            <!-- Encabezado del formulario -->
+            <h1 class="text-center" id="h1gral"><%= title %></h1>
+            <!-- Formulario de edición de publicación -->
+            <form action="/editar/<%= publicacion.id %>" method="POST">
+                <div class="form-group text-primary">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= publicacion.nombre %>">
+                </div>
+                <div class="form-group text-primary">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="<%= publicacion.email %>">
+                </div>
+                <div class="form-group text-primary">
+                    <label for="contenido">Contenido:</label>
+                    <textarea class="form-control" id="contenido" name="contenido" rows="4" maxlength="1000" required><%= publicacion.contenido %></textarea>
+                </div>
+                <div class="form-group text-primary">
+                    <label for="link">Enlace:</label>
+                    <input type="text" class="form-control" id="link" name="link" value="<%= publicacion.link %>">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <!-- Pie de página -->
+        <%- include("partials/footer") %>
+    </footer>
+</body>
+</html>

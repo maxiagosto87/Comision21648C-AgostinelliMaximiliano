@@ -1,0 +1,176 @@
+/* Reset de márgenes y rellenos para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos personalizados para encabezado general */
+#h1gral {
+  font-size: 22px;
+}
+
+/* Estilos personalizados para las publicaciones */
+#divpubli {
+  font-size: 12px;
+}
+
+/* Estilos personalizados para el logotipo en la barra de navegación */
+.logotipo {
+  height: 40px;
+  width: 136px;
+}
+
+/* Estilos personalizados para el pie de página */
+#imginsta {
+  width: 45px;
+  height: 45px;
+}
+
+#imglinkedin {
+  width: 33px;
+  height: 33px;
+}
+
+.pfooter {
+  font-size: 12px;
+}
+
+/* Cambia la apariencia de las imágenes en hover */
+.social-link .hover-image {
+  display: none;
+}
+
+.social-link:hover .hover-image {
+  display: inline;
+}
+
+.social-link:hover img {
+  display: none;
+}
+
+/* Estilos personalizados para la página de inicio */
+.fondoindex {
+  background-image: url(/img/imgIndex.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+#h2index {
+  font-size: 19px;
+}
+
+#pindex {
+  font-size: 12px;
+}
+
+/* Estilo personalizado para hacer el texto blanco */
+.text-white {
+  color: white;
+  border-style: double;
+  background-color: black;
+  opacity: 0.7;
+}
+
+a {
+  color: white;
+}
+
+/* Estilos personalizados para la página de creación de formularios */
+.fondocrear {
+  background-image: url(/img/imgCrearFormulario.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+}
+
+.container-form {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* Estilos personalizados para las publicaciones */
+.fondoPublicacion {
+  background-color: gray;
+}
+
+/* Media queries para pantallas de tamaño mediano y grande */
+@media (min-width: 768px) {
+  /* Estilos personalizados para encabezado general */
+  #h1gral {
+    font-size: 28px;
+  }
+
+  /* Estilos personalizados para las publicaciones */
+  #divpubli {
+    font-size: 16px;
+  }
+
+  /* Estilos personalizados para el logotipo en la barra de navegación */
+  .logotipo {
+    height: 40%;
+    width: 40%;
+  }
+
+  /* Estilos personalizados para la página de inicio */
+  #h2index {
+    font-size: 24px;
+  }
+
+  #pindex {
+    font-size: 16px;
+  }
+
+  /* Estilos personalizados para el pie de página */
+  #imginsta {
+    width: 55px;
+    height: 55px;
+  }
+
+  #imglinkedin {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pfooter {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Estilos personalizados para la barra de navegación */
+  #linknav {
+    font-size: 18px;
+  }
+
+  /* Estilos personalizados para la página de inicio */
+  #h2index {
+    font-size: 30px;
+  }
+
+  #pindex {
+    font-size: 18px;
+  }
+
+  /* Estilos personalizados para el pie de página */
+  #imginsta {
+    width: 65px;
+    height: 65px;
+  }
+
+  #imglinkedin {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pfooter {
+    font-size: 18px;
+  }
+
+  /* Estilos personalizados para encabezado general */
+  #h1gral {
+    font-size: 40px;
+  }
+}

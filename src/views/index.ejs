@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título de la página obtenido de la variable "title" -->
+  <title><%= title %></title>
+  <!-- Inclusión de elementos comunes en la cabeza de la página -->
+  <%- include("partials/head") %>
+</head>
+<body class="fondoindex">
+  <header>
+    <!-- Barra de navegación -->
+    <%- include("partials/navBar") %>
+  </header>
+  <main>
+    <!-- Contenedor principal usando Bootstrap para centrar el contenido -->
+    <div class="container text-center">
+      <!-- Agrega un recuadro usando Bootstrap -->
+      <div class="p-3 text-white mt-3 mb-3">
+        <h2 class="mb-1" id="h2index">Soy una persona apasionada y comprometida con mi carrera.</h2>
+        <p id="pindex">Aunque nací en Buenos Aires, hace una década que resido en Río Grande, Tierra del Fuego, lo que demuestra mi adaptabilidad y disposición para enfrentar nuevos desafíos.</p>
+        <p id="pindex">Con una amplia experiencia en el área de Sistemas, he demostrado mi valía ascendiendo a la posición de Jefe de Sistemas en BGH, y actualmente desempeño el rol de Jefe de Producción en la misma empresa. Mi trayectoria en el ámbito de la tecnología muestra dedicación y habilidades en la gestión de proyectos y equipos.</p>
+        <p id="pindex">A mis 36 años, también encuentro tiempo para mis pasatiempos, como el senderismo. Esta actividad al aire libre me permite desconectar y disfrutar de la naturaleza. Además, he encontrado en el gimnasio una forma de mantenerme equilibrado y saludable.</p>
+        <p id="pindex">En resumen, soy un profesional experimentado en Sistemas y Producción, pero que nunca le gustó estar encasillado, por eso busco crecer en conocimiento con una pasión ardiente por la programación. Soy una persona dedicada al aprendizaje continuo y me encanta enfrentar nuevos desafíos. Además, creo en el equilibrio entre la vida personal, el trabajo y la familia.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <!-- Pie de página comunes -->
+    <%- include("partials/footer") %>
+  </footer>
+</body>
+</html>
